@@ -1,4 +1,4 @@
-package com.sayali.practice.SetMatrixZero;
+package com.sayali.practice.problems.SetMatrixZero;
 
 public class SetMatrixZero {
     public void setZeroes(int[][] matrix) {

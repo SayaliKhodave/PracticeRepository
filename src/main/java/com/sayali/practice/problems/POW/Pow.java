@@ -1,4 +1,4 @@
-package com.sayali.practice.POW;
+package com.sayali.practice.problems.POW;
 
 class Pow {
 

@@ -1,4 +1,4 @@
-package com.sayali.practice.LinkedListCycle;
+package com.sayali.practice.problems.LinkedListCycle;
 
 public class LinkedListCycle {
 
