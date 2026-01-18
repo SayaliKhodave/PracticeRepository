@@ -1,10 +1,25 @@
 package com.sayali.practice.collections.queue;
 
+import java.util.Objects;
+
 public class StudentMarks {
 //public class StudentMarks implements Comparable {
 
     private int maths;
     private int physics;
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        StudentMarks that = (StudentMarks) o;
+        return maths == that.maths && physics == that.physics;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(maths, physics);
+    }
 
     public int getMaths() {
         return maths;
