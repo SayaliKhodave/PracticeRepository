@@ -7,7 +7,10 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.List;
+import java.util.NavigableSet;
 import java.util.Set;
+import java.util.SortedSet;
+import java.util.TreeSet;
 
 public class CollectionSet {
     public static void main(String[] args) {
@@ -19,10 +22,10 @@ public class CollectionSet {
 //        System.out.println(set);//[1, 2, 3]
 
 
-        List<Integer> list = new ArrayList<>();
-        list.add(1);
-        list.add(2);
-        list.add(3);
+//        List<Integer> list = new ArrayList<>();
+//        list.add(1);
+//        list.add(2);
+//        list.add(3);
 
 //        Set<Integer> set1 = new HashSet<>(list);
 //
@@ -53,16 +56,16 @@ public class CollectionSet {
 //            System.out.println(x);
 //        }
 
-        Set<Integer> set1 = new HashSet<>(list);
+//        Set<Integer> set1 = new HashSet<>(list);
 //        System.out.println(set1.contains(1));
 //        System.out.println(set1.contains(200));
 
-        Set<Integer> set2 = new HashSet<>();
-        set2.add(2);
-        set2.add(3);
-        set2.add(4);
-        set2.add(2);
-        set2.add(0);
+//        Set<Integer> set2 = new HashSet<>();
+//        set2.add(2);
+//        set2.add(3);
+//        set2.add(4);
+//        set2.add(2);
+//        set2.add(0);
 
 //        Set<Integer> set3 = new LinkedHashSet<>();
 //        set3.add(2);
@@ -78,20 +81,47 @@ public class CollectionSet {
 //        for (int x : set3) {
 //            System.out.println(x);
 //        }
-        List<StudentMarks> sm = new ArrayList<>();
-        sm.add(new StudentMarks(70,80));
-        sm.add(new StudentMarks(38,10));
-        sm.add(new StudentMarks(100,38));
-        sm.add(new StudentMarks(40,88));
-        sm.add(new StudentMarks(97,19));
+//        List<StudentMarks> sm = new ArrayList<>();
+//        sm.add(new StudentMarks(70,80));
+//        sm.add(new StudentMarks(38,10));
+//        sm.add(new StudentMarks(100,38));
+//        sm.add(new StudentMarks(40,88));
+//        sm.add(new StudentMarks(97,19));
+//
+//        Set<StudentMarks> set3 = new LinkedHashSet<>(sm);
 
-        Set<StudentMarks> set3 = new LinkedHashSet<>(sm);
-
-        System.out.println(set3.contains(new StudentMarks(70,80)));
+//        System.out.println(set3.contains(new StudentMarks(70,80)));
         //false reference is compared -> implement equals and hashcode
         //true with equals and hashcode generated
 
 //        System.out.println(set3);
+
+        //SortedSet
+//        Set<StudentMarks> treeset = new TreeSet<>((s1,s2) -> s2.getMaths() - s1.getMaths());
+//        treeset.add(new StudentMarks(70,80));
+//        treeset.add(new StudentMarks(38,10));
+//        treeset.add(new StudentMarks(100,38));
+//        treeset.add(new StudentMarks(40,88));
+//        treeset.add(new StudentMarks(97,19));
+//
+//        for (StudentMarks x : treeset)
+//            System.out.println(x + ",");
+
+
+        NavigableSet<Integer> set4 = new TreeSet<>();
+        set4.add(8);
+        set4.add(5);
+        set4.add(1);
+        set4.add(0);
+
+        for (int x : set4)
+            System.out.println(x);
+
+        System.out.println();
+        System.out.println(set4.ceiling(3));
+
+
+
 
 
 
